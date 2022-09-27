@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Metros a pies y pulgadas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let metros, pies, pulgadas;
+    metros = parseFloat (document.formulario1.metros.value);
+    pulgadas=metros*39.27;
+    pies=pulgadas/12;
+    document.formulario1.pies.value = pies;
+    document.formulario1.pulgadas.value = pulgadas;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="metros">Ingresa el valor de metros:</label>
+                        </td>
+                        <td>
+                            <input name="metros" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pies">Valor de pies:</label>
+                        </td>
+                        <td>
+                            <input name="pies" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pulgadas">Valor de pulgadas:</label>
+                        </td>
+                        <td>
+                            <input name="pulgadas" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metro a kilometros
+    </title>
+</head>
+<body>
+    <h3>Convertir metros a kilometros</h3> <form action="">
+        <label for="">metro:</label>
+        <input type="number" id="metro"><br><br>
+        <input type="button" value="Convertir" onclick="convertir()">
+        <input type="reset" value="Limpiar"><br><br>
+        <label for="">resultado:</label>
+        <input type="text" id="resultado">
+        </form>
+
+        <script>
+        function convertir(){
+        let metro = document.getElementById("metro").value;
+        let convertir = (metro * 1) / 1800;
+        document.getElementById('resultado').value = `${convertir} km`;
+        } 
+        </script>
+
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+</body>
+</html>

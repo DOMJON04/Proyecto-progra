@@ -1,0 +1,30 @@
+
+<HTML>
+    <HEAD>
+     <TITLE>Pág\aina con movimientos </TITLE>
+   <Script language="JavaScript">
+   
+    function MueveCapa(){
+      capa1.style.left= window.event.x -75;
+      capa1.style.top= window.event.y;
+      return true;
+     }
+   
+   //-->
+   </Script>
+    </HEAD>
+   <BODY onmousemove="MueveCapa();">
+   
+    <CENTER>
+    <H3> Pantalla de Movimiento </H3>
+    </CENTER>
+   
+    <div id="capa1" Style="position:absolute; left:20px; top:200px; 
+                             visibility:visible;z-index:1;">  
+       <IMG src="corre.png" width=75 height=110>
+   
+    </div>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+    </BODY>
+   </HTML>
+   

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Impuesto sobre la renta</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let hijos, impuesto, salario;
+    hijos = parseFloat (document.formulario1.hijos.value);
+    salario = parseFloat (document.formulario1.salario.value);
+    impuesto=salario*0.15;
+    if(hijos==1||hijos==2)
+        impuesto=impuesto*0.95;
+    if(hijos>2)
+        impuesto=impuesto*0.85;
+    document.formulario1.impuesto.value = impuesto;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="hijos">Ingresa el valor de hijos:</label>
+                        </td>
+                        <td>
+                            <input name="hijos" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="salario">Ingresa el valor de salario:</label>
+                        </td>
+                        <td>
+                            <input name="salario" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="impuesto">Valor de impuesto:</label>
+                        </td>
+                        <td>
+                            <input name="impuesto" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+    </body

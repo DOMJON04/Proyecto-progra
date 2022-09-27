@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coordenadas de raton</title>
+</head>
+<body>
+<h1>Mostrar coordenadas del ratón</h1>
+<form name="Show">
+X <input type="text" name="MouseX" value="0" size="4"><br>
+Y <input type="text" name="MouseY" value="0" size="4"><br>
+</form>
+<script>
+var IE = document.all?true:false;
+if (!IE) document.captureEvents(Event.MOUSEMOVE)
+document.onmousemove = getMouseXY;
+var tempX = 0;
+var tempY = 0;
+function getMouseXY(e) {
+if (IE) {tempX = event.clienX + document.body.scrollLeft; tempY = event.clientY + document.body.scrollTop;} 
+else {tempX = e.pageX;tempY = e.pageY;}
+if (tempX < 0) {tempX = 0;}
+if (tempY < 0) {tempY = 0;}
+document.Show.MouseX.value = tempX;
+document.Show.MouseY.value = tempY;
+return true;}
+</script>
+<INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>atributos</title>
+<script type="text/javascript">
+function anade() {
+	var lista = document.createElement("li");
+	var contenido = document.createTextNode("lo que sea");
+
+	lista.appendChild(contenido);
+
+	document.getElementById("lista").appendChild(lista);
+}
+</script>
+</head>
+
+<body>
+
+<ul id="lista">
+	<li>Lorem ipsum dolor sit amet</li>
+	<li>Consectetuer adipiscing elit</li>
+	<li>Sed mattis enim vitae orci</li>
+	<li>Phasellus libero</li>
+	<li>Maecenas nisl arcu</li>
+</ul>
+
+<input value="agregar elemento" onclick="anade();" type="button">
+
+<INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+</body>
+</html>

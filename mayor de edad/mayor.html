@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //PIDE POR TECLADO LA EDAD
+        var edad = prompt("Introduce tu edad");
+        //COMPRUEBA QUE LO INTRODUCIDO ES UN NÚMERO
+        if (Number(edad) == edad) {
+            //SI ES MAYOR DE 18
+            if (edad > 18) {
+                //IMPRIME EN PANTALLA EL MENSAJE
+                document.write("Puedes conducir");
+            }
+        }
+        //SINÓ
+        else {
+            //MUESTRA UN MENSAJE
+            alert("Muy joven");
+        }
+        </script>
+        <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+</body>
+</html>
